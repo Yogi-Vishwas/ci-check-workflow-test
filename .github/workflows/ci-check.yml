@@ -29,3 +29,8 @@ jobs:
         uses: m19c/action-lerna@1.0.0
         with:
           args: "run build"
+
+      - name: lerna-test
+        uses: m19c/action-lerna@1.0.0
+        with:
+          args: "run test"
