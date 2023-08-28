@@ -1,0 +1,19 @@
+{
+  "name": "ci-check-workflow-test",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/*/cdk"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "lerna": "^7.1.5"
+  },
+  "author": "vishwas.yogi@sourcefuse.com",
+  "license": "ISC"
+}
