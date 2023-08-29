@@ -165,7 +165,7 @@ export class UserRepository extends AuditRepositoryMixin<
   ): Promise<User> {
     const user = await super.findOne({where: {username}});
     const creds = user && (await this.credentials(user.id).get());
-    if (!user || user.deleted || !creds || !creds.password) {
+    if ((!user || user.deleted) ?? !creds?.password) {
       throw new HttpErrors.Unauthorized(AuthenticateErrorKeys.UserDoesNotExist);
     } else if (creds.authProvider !== AuthProvider.INTERNAL) {
       throw new HttpErrors.BadRequest(
@@ -208,7 +208,7 @@ export class UserRepository extends AuditRepositoryMixin<
       );
     }
 
-    if (!user || user.deleted || !creds || !creds.password) {
+    if ((!user || user.deleted) ?? !creds?.password) {
       throw new HttpErrors.Unauthorized(AuthenticateErrorKeys.UserDoesNotExist);
     } else if (await bcrypt.compare(newPassword, creds.password)) {
       throw new HttpErrors.Unauthorized(

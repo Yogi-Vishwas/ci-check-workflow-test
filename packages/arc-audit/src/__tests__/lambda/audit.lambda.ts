@@ -42,7 +42,6 @@ describe("Audit App", () => {
 
 describe("Audit Microservice", () => {
   it("should return status 200 while fetching audit logs and token is passed", async () => {
-    const reqData = {};
     await request(BASE_URL)
       .get("/audit-logs")
       .set("authorization", `Bearer ${token}`)

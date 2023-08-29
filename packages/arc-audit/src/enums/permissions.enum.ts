@@ -3,7 +3,7 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 export declare const enum PermissionKey {
-  CreateTodo = 'TodoCreator',
-  UpdateTodo = 'TodoCreator',
-  DeleteTodo = 'TodoCreator',
+  CreateTodo = "CreateTodo",
+  UpdateTodo = "UpdateTodo",
+  DeleteTodo = "DeleteTodo",
 }

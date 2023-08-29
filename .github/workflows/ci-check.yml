@@ -26,11 +26,7 @@ jobs:
         run: npm ci
 
       - name: lerna-build
-        uses: m19c/action-lerna@1.0.0
-        with:
-          args: "run build"
+        run: npx lerna run build
 
-      - name: lerna-test
-        uses: m19c/action-lerna@1.0.0
-        with:
-          args: "run test"
+      - name: lerna-lint
+        run: npx lerna run lint
