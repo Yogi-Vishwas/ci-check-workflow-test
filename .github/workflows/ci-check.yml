@@ -23,7 +23,7 @@ jobs:
       - run: npm --version
 
       - name: install-dependencies
-        run: npm ci
+        run: npm install
 
       - name: lerna-build
         uses: m19c/action-lerna@1.0.0
