@@ -23,7 +23,7 @@ jobs:
       - run: npm --version
 
       - name: install-dependencies
-        run: npm ci
+        run: npm i
 
       - name: lerna-build
         run: npx lerna run build
